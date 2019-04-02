@@ -1,0 +1,787 @@
+body {
+	background: black url('./images/linesbg.gif');
+	font: 12px Arial, Sans-serif;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	color: black;
+	text-decoration: none;
+}
+a:hover {
+        color:black;
+	text-decoration: underline;
+}
+a:active, a:focus {
+	outline: none;
+}
+img {
+	border: none;
+}
+hr {
+	border:0;
+	border-top:1px dotted #555555;
+	height:1px;
+	padding-bottom:.3em;
+}
+form {
+	padding: 0px;
+	margin: 0px;
+}
+input,
+select {
+	background-color:white;
+	font: 13px Arial, Sans-serif;
+	color:black;
+	margin: 1px;
+	padding: 1px 2px;
+	border:1px solid #555555;
+	cursor: pointer;
+}
+input.check {
+	border: none;
+	margin: 2px;
+}
+label {
+	margin: 1px 4px;
+	cursor: pointer;
+}
+label.poll {
+	position: absolute;
+}
+input:active {
+	padding: 1px 2px;
+}
+textarea {
+	width: 98%;
+	background-color:#a8a8a8;
+	font: 13px Arial, Sans-serif;
+	padding: 1px 2px 0px 0px;
+	border:1px solid #555555;
+}
+
+/* Container */
+#container {
+	background: white;
+	color:black;
+	margin: 0px 1%;
+	text-align: left;
+        border:1px solid black;
+        border-top:none;
+}
+
+/* Company */
+#header {
+	height: 125px;
+	margin: 0px 0px 2px;
+}
+#header #company {
+	text-align:left;
+}
+#header #company .title {
+	background: url('./images/quicksilver_logo.png') no-repeat;
+	height: 125px;
+	width: 410px;
+	margin: 0px;
+	float: left;
+}
+
+/* Top Navigation */
+#header #navigation {
+	margin: 0px 8px;
+	padding: 0px;
+	list-style-type: none;
+	float: right;
+}
+#header #navigation li {
+	background: #e0e0e0;
+	padding: 6px 0px 0px;
+	float: left;
+}
+#header #navigation li a {
+	background: #e0e0e0;
+	font: 14px Arial, Sans-serif;
+	padding: 8px 8px 4px;
+	border-left: 1px solid #555555;
+	border-right: 1px solid #555555;
+	border-bottom: 1px solid #555555;
+}
+#header #navigation li.active a {
+	background: #555555;
+	border-left: 1px solid #555555;
+	border-right: 1px solid #555555;
+	border-bottom: 1px solid #555555;
+}
+
+/* Rounding */
+#container .rounded_top span,
+#container .rounded_bottom span {
+	height: 1px;
+	display: block;
+	overflow: hidden;
+}
+#container .rounded_top span.one, 
+#container .rounded_bottom span.four {
+	margin: 0px 4px;
+	height: 0px;
+	border-top: 1px solid #555555;
+}
+#container .rounded_top span.two, 
+#container .rounded_bottom span.three {
+	margin: 0px 3px;
+	border-left: 1px solid #555555;
+	border-right: 1px solid #555555;
+}
+#container .rounded_top span.three, 
+#container .rounded_bottom span.two {
+	margin: 0px 2px;
+	border-left: 1px solid #555555;
+	border-right: 1px solid #555555;
+}
+#container .rounded_top span.four, 
+#container .rounded_bottom span.one {
+	height: 2px;
+	margin: 0px 1px;
+	border-left: 1px solid #555555;
+	border-right: 1px solid #555555;
+}
+
+/* Title */
+#title {
+	background: #D9E6D4;
+	margin: 0px 0px 4px;
+	height: 1%; /* IE Hack */
+	padding: 5px;
+	border-top: 3px double #FFFFFF;
+	border-bottom: 3px double #FFFFFF;
+	text-align: center;
+}
+#title .announce {
+	background: #FFFFFF;
+	font: 75px Arial, Sans-serif;
+	color: #739EB9;
+}
+#title .details {
+	background: #FFFFFF;
+	font: 28px Arial, Sans-serif;
+	color: #517C97;
+}
+
+/* Main */
+#main {
+	width: 100%;
+}
+#main.middle {
+	width: 50%;
+	float: left;
+}
+#main .article {
+	background: #e0e0e0;
+	margin: 0px 0px 5px;
+	padding: 4px 6px;
+	border: 1px solid #555555;
+        border-left:none;
+	border-bottom: 3px double #555555;
+}
+#main .title {
+	background: #5ca0e6 url('./images/header_gradient.png');
+	font: 18px Arial, Sans-serif;
+	color: black;
+	margin: 0px -2px 4px -7px;
+	padding: 3px 4px 2px 7px;
+	border: 1px solid black;
+	border-right: 3px double black;
+}
+#main .article a.attention {
+	color:red;
+	font-weight:bold;
+}
+
+/* Button effects */
+.smallbutton a {
+	background-position: 2px center;
+	background-repeat: no-repeat;
+        background-color:#5ca0e6;
+	font: 10px Arial, Sans-serif;
+	text-align: center;
+	text-decoration: none;
+	width: 16px;
+	height: 16px;
+	margin: 1px 1px;
+	padding: 2px;
+	border: 1px solid #3e3e3e;
+	float: left;
+}
+.button a {
+	background-position: 2px center;
+	background-repeat: no-repeat;
+        background-color:#5ca0e6;
+	font: 10px Arial, Sans-serif;
+        font-weight:bold;
+	text-align: center;
+	text-decoration: none;
+	width: 40px;
+	margin: 1px 2px;
+	padding: 2px 2px 4px 22px;
+	border: 1px solid black;
+	float: right;
+}
+.postbit .button a {
+	margin: 1px 2px 5px;
+	padding: 3px 2px 2px 22px;
+}
+.smallbutton .messenger { background-image: url('./images/icons/messenger.png'); }
+.smallbutton .email { background-image: url('./images/icons/email.png'); }
+.smallbutton .home {	background-image: url('./images/icons/homesite.png'); }
+.smallbutton .icq { background-image: url('./images/icons/icq_logo.png'); }
+.smallbutton .aim { background-image: url('./images/icons/aim_logo.png'); }
+.smallbutton .yahoo { background-image: url('./images/icons/yahoo_logo.png'); }
+.smallbutton .msn { background-image: url('./images/icons/msn_logo.png'); }
+.smallbutton .skype { background-image: url('./images/icons/skype.png'); }
+.smallbutton .gtalk { background-image: url('./images/icons/gtalk_logo.png'); }
+.button .quotepost { background-image: url('./images/icons/comments_add.png'); }
+.button .spam { background-image: url('./images/icons/spam_delete.png'); }
+.button .delete { background-image: url('./images/icons/comment_delete.png'); }
+.button .edit { background-image: url('./images/icons/comment_edit.png'); }
+
+.bigbutton a {
+	background-position: 6px center;
+	background-repeat: no-repeat;
+        background-color:#5ca0e6;
+	font: 12px Arial, Sans-serif;
+        font-weight:bold;
+	text-align: center;
+	text-decoration: none;
+	margin: 0px 1px;
+	padding: 4px 6px 4px 26px;
+	border: 1px solid black;
+	float: left;
+}
+.bigbutton a.locked {
+        background-color: #eeeeee;
+}
+.bigbutton .messenger {	background-image: url('./images/icons/messenger.png') }
+.bigbutton .new_message { background-image: url('./images/icons/new_message.png') }
+.bigbutton .reply { background-image: url('./images/icons/message_reply.png') }
+.bigbutton .delete { background-image: url('./images/icons/message_delete.png') }
+.bigbutton .poll { background-image: url('./images/icons/chart_bar_add.png') }
+.bigbutton .topic { background-image: url('./images/icons/new_topic.png') }
+.bigbutton .topic_reply { background-image: url('./images/icons/comment_add.png') }
+.bigbutton .subscribe {	background-image: url('./images/icons/subscribe.png') }
+.bigbutton .quick_reply { background-image: url('./images/icons/comment_add_blured.png') }
+.bigbutton .locked { background-image: url('./images/icons/topic_locked.png') }
+
+/* Button-align */
+#main .article span.big_button_align {
+	margin: 5px 4px 4px;
+	float: right;
+}
+#main .article select.big_button_align {
+	margin: 3px;
+	float: right;
+}
+
+/* Topic Icons */
+#main .article img.topic_icon {
+	float: right;
+	margin: 0px 2px;
+}
+#main .article div.topic_icon {
+	padding: 0px;
+}
+#main .article div.topic_icon div {
+	background-repeat: no-repeat;
+	height: 22px;
+}
+div.open { background: url('./images/topicicons/open.png') }
+div.hot { background: url('./images/topicicons/hot.png') }
+div.newopen { background: url('./images/topicicons/newopen.png') }
+div.newhot { background: url('./images/topicicons/newhot.png') }
+div.dotopen { background: url('./images/topicicons/dotopen.png') }
+div.dothot { background: url('./images/topicicons/dothot.png') }
+div.newdotopen { background: url('./images/topicicons/newdotopen.png') }
+div.newdothot { background: url('./images/topicicons/newdothot.png') }
+
+div.openpoll { background: url('./images/topicicons/openpoll.png') }
+div.hotpoll { background: url('./images/topicicons/hotpoll.png') }
+div.newopenpoll { background: url('./images/topicicons/newopenpoll.png') }
+div.newhotpoll { background: url('./images/topicicons/newhotpoll.png') }
+div.dotopenpoll { background: url('./images/topicicons/dotopenpoll.png') }
+div.dothotpoll { background: url('./images/topicicons/dothotpoll.png') }
+div.newdotopenpoll { background: url('./images/topicicons/newdotopenpoll.png') }
+div.newdothotpoll { background: url('./images/topicicons/newdothotpoll.png') }
+
+div.moved { background: url('./images/topicicons/moved.png') }
+div.locked { background: url('./images/topicicons/lockedopen.png') }
+div.newlocked { background: url('./images/topicicons/lockedopennew.png') }
+div.lockedpoll { background: url('./images/topicicons/lockedopenpoll.png') }
+div.newlockedpoll { background: url('./images/topicicons/lockedopennewpoll.png') }
+
+/* Pin overlaps other topic icons */
+div.pinned { background: url('./images/icons/pin_faded.png') }
+
+/* Forum-specific Rules */
+#main .article .head span,
+#main .article .head strong {
+	font: bold italic 13px Arial, Sans-serif;
+	border-bottom: 1px dotted #555555;
+	margin: 0px 0px 3px;
+	display: block;
+	position: relative;
+	width: 100%;
+}
+#main .article span {
+	padding: 2px 0px;
+}
+#main .article .rounded_top span,
+#main .article .rounded_bottom span {
+	padding: 0px;
+}
+#main .article span.right {
+	padding: 0px;
+	float: right;
+}
+#main .article .left {
+	padding: 0px;
+	float: left;
+}
+#main .article span.icon,
+#main .article div.topic_icon {
+	width: 4%;
+	float: left;
+}
+#main .article p {
+	height: 0px;
+	margin: 0px;
+	overflow: hidden;
+	clear: both;
+}
+#main .article p.line {
+	margin: 3px 0px;
+	border-bottom: 1px dotted #555555;
+}
+#main .article p.list_line {
+	margin: 1px 0px 3px;
+	border-bottom: 1px dotted #555555;
+}
+#main .article .small_text {
+	font: 10px Arial, Sans-serif;
+}
+#main .article .tiny {
+	font: 10px Arial, Sans-serif;
+}
+#main .article span.notice {
+	background: url('./images/icons/alert.png') no-repeat;
+	margin: 10px;
+	padding: 1px 20px;
+	float: left;
+}
+
+/* View Topic */
+#main .article span.topic_description {
+	font: bold 16px Arial, Sans-serif;
+	margin: 4px 6px;
+	float: left;
+}
+#main .article span.next_prev_topics {
+	margin: 6px 10px 2px;
+	float: right;
+}
+
+/* Quotes */
+#main .article div.quote {
+	background: #fefefe;
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	padding: 5px;
+	border: 1px solid black;
+}
+#main .article span.quote {
+	color:black;
+	font: bold 14px Arial, Sans-serif;
+}
+#main .article span.quote a {
+	color:black;
+	font: bold 14px Arial, Sans-serif;
+}
+#main .article span.quote a:hover {
+	color:yellow;
+	font: bold 14px Arial, Sans-serif;
+}
+#main .article span.left-quote {
+	background: #fefefe url("./images/left-quote.png") left no-repeat;
+	padding-left:20px;
+}
+#main .article span.right-quote {
+	background: #fefefe url("./images/right-quote.png") right no-repeat;
+	padding-right:20px;
+}
+
+/* Code */
+#main .article pre.code {
+	background: #fefefe url('./images/code.png') top right no-repeat;
+	width: 98%;
+	padding: 3px 5px;
+	border: 1px solid black;
+	white-space:pre;
+	overflow:auto;
+}
+#main .article pre.codebox {
+	background: #fefefe url('./images/code.png') top right no-repeat;
+	width: 98%;
+	padding: 3px 5px;
+	border: 1px solid black;
+	height:200px;
+	white-space:pre;
+	overflow:auto;
+}
+#main .article pre.phpcode {
+        color:black;
+	background: #fefefe url('./images/code_php.png');
+}
+#main .article div.codetitle {
+	font-weight: bold;
+}
+
+/* Attachments */
+#main .article div.filebox {
+	background: #fefefe url('./images/attachment.png') top right  no-repeat;
+	margin: 6px 0px 0px;
+	padding: 3px 6px;
+	border: 1px solid black;
+}
+
+/* Spoilers */
+#main .article div.spoilerbox {
+	background: #fefefe url('./images/spoiler.png') top right  no-repeat;
+	padding: 3px 6px;
+	border: 1px solid black;
+}
+#main .article div.spoilerbox .spoiler {
+	color: #fefefe;
+}
+
+/* Postbit */
+#main .article .hidden {
+	display: none;
+}
+#main .article span.avatar {
+	margin: 4px 4px 0px;
+	overflow: hidden;
+	float: left;
+}
+#main .article span.avatar br {
+	display: none;
+}
+#main .article span.member_bits {
+	width: 192px;
+	float: right;
+}
+#main .article span.member_info {
+	font: 11px Arial, Sans-serif;
+	margin: 2px 7px 0px;
+	float: left;
+}
+#main .article span.member_info strong {
+	font: 16px Arial, Sans-serif;
+}
+#main .article span.member_info strong a:hover {
+	color: black;
+}
+#main .article span.member_info span.text {
+	font-weight: bold;
+	width: 100px;
+	padding: 0px;
+	float: left;
+}
+#main .article .rounded_top {
+	padding: 2px 0px 0px;
+}
+#main .article .rounded_top span,
+#main .article .rounded_bottom span {
+	background: #eeeeee;
+}
+#main .article div.postbit {
+	background: #eeeeee;
+	padding: 1px 5px;
+	border-left: 1px solid #555555;
+	border-right: 1px solid #555555;
+	display: block;
+	margin: 0px;
+}
+#main .article div.postbit span.signature {
+	font: 11px Arial, Sans-serif;
+	margin: 2px 4px 0px;
+	display: block;
+}
+#main .article span.posted {
+	float: right;
+	margin: 0px 2px 2px;
+}
+
+/* New Post */
+#main .article div.form ul.post_icons {
+	padding: 10px;
+	margin: 0px;
+}
+#main .article div.form ul.post_icons li {
+	display: inline;
+	white-space: nowrap;
+	list-style-type: none;
+}
+
+/* Messages */
+#main .article span.delete {
+	text-align: right;
+	width: 9%;
+	float: left;
+}
+#main .article span.message {
+	width: 38%;
+	float: left;
+}
+
+/* Forms */
+#main .article span.field {
+	font-weight: bold;
+	width: 15%;
+	margin: 5px 0px;
+	float: left;
+}
+#main .article span.field span {
+	font-weight: normal;
+}
+#main .article span.form,
+#main .article div.form {
+	width: 85%;
+	float: left;
+}
+
+/* Profile */
+#main #profile span.field {
+	margin: 1px 0px 2px;
+}
+
+/* Search */
+#main .article span.half {
+	width: 48%;
+	padding: 0px 2% 0px 0px;
+	overflow: hidden;
+	float: left;
+}
+#main .article span.search_forum {
+	width: 8%;
+	float: left;
+}
+
+/* Subscriptions */
+#main .article span.quarter {
+	width: 25%;
+	float: left;
+	padding: 0px 0px 4px;
+}
+#main .article span.quarter a {
+	margin: 2px 0px 1px;
+	float: left;
+}
+
+/* Edit Avatar */
+#main .article div.avatar_dimensions {
+	margin: 8px 3px 8px;
+	float: left;
+}
+#main .article div.avatar_dimensions img {
+	float: left;
+}
+#main .article div.avatar_dimensions span.text {
+	width: 40px;
+	float: left;
+	margin: 2px 6px 0px;
+}
+
+/* Member List */
+#main .article .center {
+	text-align: center;
+}
+#main .article span.member {
+	width: 18%;
+	float: left;
+}
+#main .article span.nine {
+	text-align: center;
+	width: 11%;
+	float: left;
+}
+#main .article span.group {
+	text-align: center;
+	width: 17%;
+	float: left;
+}
+
+/* Index */
+#main .article span.thread {
+	width: 42%;
+	margin: 0px 0px 2px;
+	overflow-x: auto;
+	float: left;
+}
+#main .article span.thread br {
+	display: none;
+}
+#main .article span.thread a.forum {
+	font: bold 16px Arial, Sans-serif;
+	width: 100%;
+	margin: 0px;
+	padding: 2px 0px 1px;
+	display: block; /* IE Hack */
+}
+#main .article span.thread a:hover {
+	color: black;
+	text-decoration: underline;
+}
+#main .article span.number {
+	text-align: center;
+	width: 15%;
+	padding: 2px 0px;
+	float: left;
+}
+#main .article span.last_post {
+	text-align: right;
+	width: 24%;
+	overflow-x: auto;
+	float: left;
+}
+
+/* Recent Topics */
+#main .article span.recent_topic {
+	width: 38%;
+	margin: 0px 0px 2px;
+	overflow-x: auto;
+	float: left;
+}
+
+/* Spam Controls */
+#main .article span.spamaction {
+	width: 10%;
+	margin: 0px 0px 2px;
+	overflow-x: auto;
+	float: left;
+}
+#main .article span.spamtopic {
+	width: 10%;
+	margin: 0px 0px 2px;
+	overflow-x: auto;
+	float: left;
+}
+#main .article span.spamuser {
+	width: 10%;
+	margin: 0px 0px 2px;
+	float: left;
+	text-align: center;
+}
+#main .article span.spamip {
+	text-align: center;
+	width: 10%;
+	float: left;
+}
+#main .article span.spamdate {
+	text-align: center;
+	width: 15%;
+	float: left;
+}
+#main .article span.spamtext {
+	width: 40%;
+	float: left;
+}
+
+/* Topics */
+#main .article span.topic {
+	width: 28%;
+	margin: 0px 0px 2px;
+	overflow-x: auto;
+	float: left;
+}
+#main .article span.starter {
+	width: 13%;
+	margin: 0px 0px 2px;
+	float: left;
+	text-align: center;
+}
+#main .article span.topic_last_post {
+	text-align: right;
+	width: 20%;
+	overflow-x: auto;
+	float: left;
+}
+#main .article a.mark_read {
+	margin: 6px 0px 2px;
+	float: right;
+}
+#main .article a.mark_read:hover {
+	text-decoration: none;
+}
+
+/* Member CP */
+#main .article div.avatar_settings .check {
+	margin: 4px 2px 0px;
+}
+#main .article div.signature {
+	margin: 2px;
+	position: relative;
+}
+
+/* Topic Icon Key */
+#main .article span.eight {
+	font: 10px Arial, Sans-serif;
+	text-align: center;
+	width: 12.4%;
+	float: left;
+}
+#main .article span.eight img {
+	margin: 0px 3px 0px 0px;
+}
+#main .article span.select_align {
+	margin: 3px 3px;
+	float: left;
+}
+
+/* Online Listing */
+#main .article span.third {
+	width: 32%;
+	float: left;
+}
+
+/* Bottom */
+#bottom {
+	height: 1px;
+	clear: both;
+}
+
+/* Avatar Selection */
+#local_row  {
+	height:200px;
+}
+
+/* Footer */
+#footer, #copyright {
+	font: 10px Arial, Sans-serif;
+	color: black;
+	text-align: center;
+	margin: 4px 4px 8px;
+}
+#footer a, #copyright a {
+	color: black;
+        font-weight:bold;
+}
+
+/* Colours */
+.c1 { color: #517C97; } /* Ocean Blue - Main Text */
+.c2 { color: #739EB9; } /* Medium Blue - Large Announcement */
+.c3 { color: #87B885; } /* Light Green */
+.c4 { color: #E65757; } /* Pinky Red */
+.c5 { color: #ED9E50; } /* Orange */
+.c6 { color: #67ADC5; } /* Sky Blue */
+.c7 { color: #B8AC85; } /* Dirty Brown */
+.c8 { color: #4E8D4B; } /* Dark Green */
